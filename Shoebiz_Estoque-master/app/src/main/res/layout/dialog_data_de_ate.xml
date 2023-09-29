@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:layout_gravity="center"
+    tools:ignore="RtlSymmetry">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="14dp"
+        android:gravity="bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:text="@string/data"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp">
+
+        <LinearLayout
+            android:id="@+id/dataDe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:text="@string/de" />
+
+            <EditText
+                android:id="@+id/etDataDe"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_marginEnd="10dp"
+                android:ems="10"
+                android:inputType="date"
+                android:enabled="false"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp"
+                android:gravity="center"
+                tools:ignore="LabelFor"
+                android:focusable="false" />
+
+            <ImageButton
+                android:id="@+id/ibCalendarioDataDe"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/vazio"
+                android:background="@null"
+                android:src="@drawable/ic_date_range_black"
+                android:adjustViewBounds="true"
+                android:foreground="?android:selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dataAte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dataDe"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:text="@string/ate" />
+
+            <EditText
+                android:id="@+id/etDataAte"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_marginEnd="10dp"
+                android:ems="10"
+                android:inputType="date"
+                android:enabled="false"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp"
+                android:gravity="center"
+                tools:ignore="LabelFor"
+                android:focusable="false" />
+
+            <ImageButton
+                android:id="@+id/ibCalendarioDataAte"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/vazio"
+                android:background="@null"
+                android:src="@drawable/ic_date_range_black"
+                android:adjustViewBounds="true"
+                android:foreground="?android:selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/bFechar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/bOk"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:textColor="?attr/colorPrimaryDark"
+            android:text="@string/fechar" />
+
+        <Button
+            android:id="@+id/bOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:text="@string/ok"
+            android:textColor="?attr/colorPrimaryDark" />
+    </RelativeLayout>
+</LinearLayout>

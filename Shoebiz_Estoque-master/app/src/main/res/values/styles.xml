@@ -1,0 +1,56 @@
+<resources>
+    <style name="AppTheme.Shoebiz" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorSbPrimary</item>
+        <item name="colorPrimaryDark">@color/colorSbPrimaryDark</item>
+        <item name="colorAccent">@color/colorSbAccent</item>
+        <item name="colorPrimaryLight">@color/colorSbLightPrimary</item>
+    </style>
+
+    <style name="AppTheme.FullScreenDialog.Shoebiz" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="colorPrimary">@color/colorSbPrimary</item>
+        <item name="colorPrimaryDark">@color/colorSbPrimaryDark</item>
+        <item name="colorAccent">@color/colorSbAccent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="actionMenuTextColor">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Shoebiz.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+    </style>
+
+    <style name="FullScreenSb" parent="AppTheme.Shoebiz">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.Shoebiz.NoActionBar.NavDrawer" />
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">?attr/colorPrimaryDark</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+    </style>
+
+    <style name="AppTheme.Shoebiz.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.Shoebiz.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TabLayoutTransfTipoText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Slide">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/text_input_box_stroke</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+    </style>
+</resources>

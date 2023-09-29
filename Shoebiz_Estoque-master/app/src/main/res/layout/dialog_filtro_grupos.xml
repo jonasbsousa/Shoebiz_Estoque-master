@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvDialogConfirmaTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryText"
+        android:text="@string/filtro_grupo"
+        android:textSize="@dimen/text_size_subtitulo"/>
+
+    <LinearLayout
+        android:id="@+id/llCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <Button
+            android:id="@+id/bCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/bAplicar"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="10dp"
+            android:textColor="?attr/colorPrimaryDark"
+            android:text="@string/cancelar" />
+
+        <Button
+            android:id="@+id/bAplicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:textColor="?attr/colorPrimaryDark"
+            android:text="@string/aplicar" />
+    </RelativeLayout>
+</LinearLayout>

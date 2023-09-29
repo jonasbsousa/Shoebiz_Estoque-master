@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_areas_coletadas"
+        android:title="@string/areas_coletadas"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_carrega_produtos"
+        android:title="@string/carrega_produtos"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_status_inventario"
+        android:title="@string/status_inventario"
+        app:showAsAction="never"/>
+</menu>

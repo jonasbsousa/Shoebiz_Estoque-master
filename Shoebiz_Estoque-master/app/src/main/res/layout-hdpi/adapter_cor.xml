@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardElevation="2dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tvTxtDescCorErp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_1"
+            android:text="@string/frag_cp_desc_cor_erp"/>
+
+        <TextView
+            android:id="@+id/tvDescCorErp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_toEndOf="@+id/tvTxtDescCorErp"
+            android:textSize="@dimen/text_size_1" />
+
+        <TextView
+            android:id="@+id/tvTxtDescCorForn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDescCorErp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_1"
+            android:text="@string/frag_cp_desc_cor_fornecedor"/>
+
+        <TextView
+            android:id="@+id/tvDescCorForn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDescCorErp"
+            android:layout_toEndOf="@+id/tvTxtDescCorForn"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_1" />
+
+        <View
+            android:id="@+id/vDividerCor"
+            android:layout_below="@id/tvTxtDescCorForn"
+            android:background="@color/cardview_shadow_start_color"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            card_view:ignore="PrivateResource" />
+
+        <HorizontalScrollView
+            android:layout_below="@+id/vDividerCor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvDescTamanho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_1"
+                    android:textStyle="bold"
+                    android:text="@string/tamanho"/>
+
+                <TextView
+                    android:id="@+id/tvAptTamanho"
+                    android:layout_below="@+id/tvDescTamanho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_1"
+                    android:textStyle="bold"
+                    android:text="@string/qantidade"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvGrade"
+                    android:layout_toEndOf="@+id/tvDescTamanho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:clipToPadding="false"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbars="vertical"
+                    android:scrollbarStyle="outsideOverlay" />
+
+                <RelativeLayout
+                    android:layout_toEndOf="@+id/rvGrade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvTxtQuantTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_1"
+                        android:textStyle="bold"
+                        android:text="@string/total"/>
+
+                    <TextView
+                        android:id="@+id/tvQuantTotal"
+                        android:layout_below="@+id/tvTxtQuantTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_size_1"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

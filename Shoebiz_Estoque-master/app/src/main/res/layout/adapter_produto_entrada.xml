@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:id="@+id/rlTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <RelativeLayout
+            android:id="@+id/rlTextoDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlBoxImagem"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="16dp">
+
+                <ProgressBar
+                    android:id="@+id/pbProcessando"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminate="true"
+                    android:indeterminateTint="?attr/colorPrimary"
+                    android:indeterminateTintMode="src_in" />
+
+                <ImageView
+                    android:id="@+id/ivErro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/vazio"
+                    android:src="@drawable/baseline_error_red"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvCodigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/rlBoxImagem"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/tvQuantidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBoxInfoProd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlTextoDescricao"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvDescricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/pesquisando"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvCor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDescricao"
+                android:text="@string/cor"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvTamanho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDescricao"
+                android:layout_alignParentEnd="true"
+                android:text="@string/tam"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/vDividerProdutos"
+        android:layout_below="@id/rlTxt"
+        android:background="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp" />
+</RelativeLayout>

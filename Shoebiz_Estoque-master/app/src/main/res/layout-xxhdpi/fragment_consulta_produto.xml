@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llPesquisaCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@xml/style_frag_searchview"
+                android:orientation="horizontal">
+
+                <SearchView
+                    android:id="@+id/svCodigoProduto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:queryHint="@string/frag_cp_codigo_produto"
+                    android:iconifiedByDefault="false" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/ibPesquisaCamera"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:paddingTop="3dp"
+                android:paddingStart="-20dp"
+                android:paddingEnd="-25dp"
+                android:src="@drawable/ic_local_see_black"
+                android:background="?android:selectableItemBackground"
+                android:contentDescription="@string/vazio"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSemProduto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="visible"
+            android:textSize="@dimen/text_size_subtitulo"
+            android:text="@string/frag_cp_sem_produto"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nscInfoProduto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:visibility="gone"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:descendantFocusability="blocksDescendants">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvInformacoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    app:cardElevation="3dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="false"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/tvInformacoes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_titulo"
+                            android:textStyle="bold"
+                            android:text="@string/frag_cp_informacoes"/>
+
+                        <View
+                            android:id="@+id/vDividerProdutos"
+                            android:layout_below="@id/tvInformacoes"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_height="0.7dp"
+                            android:background="@color/cardview_shadow_start_color"/>
+
+                        <TextView
+                            android:id="@+id/tvTxtCodigoPai"
+                            android:layout_below="@id/vDividerProdutos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="5dp"
+                            android:textSize="@dimen/text_size_1"
+                            android:textStyle="bold"
+                            android:text="@string/frag_cp_codigo"/>
+
+                        <TextView
+                            android:id="@+id/tvCodigoPai"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@id/vDividerProdutos"
+                            android:layout_toEndOf="@+id/tvTxtCodigoPai"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/text_size_1"/>
+
+                        <TextView
+                            android:id="@+id/tvTxtDescricao"
+                            android:layout_below="@id/tvCodigoPai"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="5dp"
+                            android:textSize="@dimen/text_size_1"
+                            android:textStyle="bold"
+                            android:text="@string/frag_cp_descricao"/>
+
+                        <TextView
+                            android:id="@+id/tvDescricao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@id/tvCodigoPai"
+                            android:layout_toEndOf="@+id/tvTxtDescricao"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/text_size_1"/>
+
+                        <TextView
+                            android:id="@+id/tvTxtGrupo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@id/tvTxtDescricao"
+                            android:textSize="@dimen/text_size_1"
+                            android:textStyle="bold"
+                            android:text="@string/frag_cp_grupo"/>
+
+                        <TextView
+                            android:id="@+id/tvGrupo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@id/tvTxtDescricao"
+                            android:layout_toEndOf="@+id/tvTxtGrupo"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/text_size_1"/>
+
+                        <TextView
+                            android:id="@+id/tvTxtMarca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/tvTxtGrupo"
+                            android:textSize="@dimen/text_size_1"
+                            android:textStyle="bold"
+                            android:text="@string/frag_cp_marca"/>
+
+                        <TextView
+                            android:id="@+id/tvMarca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/tvTxtGrupo"
+                            android:layout_toEndOf="@+id/tvTxtMarca"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/text_size_1" />
+
+                        <TextView
+                            android:id="@+id/tvTxtCodResumido"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/tvTxtGrupo"
+                            android:layout_toStartOf="@+id/tvCodResumido"
+                            android:textSize="@dimen/text_size_1"
+                            android:textStyle="bold"
+                            android:text="@string/frag_cp_cod_resu"/>
+
+                        <TextView
+                            android:id="@+id/tvCodResumido"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_below="@+id/tvTxtGrupo"
+                            android:layout_alignParentEnd="true"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/text_size_1" />
+
+                        <TextView
+                            android:id="@+id/tvTxtTamanhos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_below="@+id/tvTxtMarca"
+                            android:textSize="@dimen/text_size_1"
+                            android:textStyle="bold"
+                            android:text="@string/frag_cp_tamanho"/>
+
+                        <TextView
+                            android:id="@+id/tvTamanhos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/tvTxtMarca"
+                            android:layout_toEndOf="@+id/tvTxtTamanhos"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/text_size_1"/>
+
+                        <TextView
+                            android:id="@+id/tvTxtQntPares"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_below="@+id/tvTxtMarca"
+                            android:layout_toStartOf="@+id/tvQntPares"
+                            android:textSize="@dimen/text_size_1"
+                            android:textStyle="bold"
+                            android:text="@string/frag_cp_qntPares"/>
+
+                        <TextView
+                            android:id="@+id/tvQntPares"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_below="@+id/tvTxtMarca"
+                            android:layout_alignParentEnd="true"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/text_size_1"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvFoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    app:cardElevation="3dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="false"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp">
+
+                        <TextView
+                            android:id="@+id/tvFoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_titulo"
+                            android:textStyle="bold"
+                            android:text="@string/frag_cp_foto"/>
+
+                        <View
+                            android:id="@+id/vDividerFoto"
+                            android:layout_below="@id/tvFoto"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_height="0.7dp"
+                            android:background="@color/cardview_shadow_start_color"/>
+
+                        <ImageView
+                            android:id="@+id/ivFotoProduto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/vDividerFoto"
+                            android:contentDescription="@string/vazio" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvHistoricoAlt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    app:cardElevation="3dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="false"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/tvHistoricoAlt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/frag_cp_ultimas_alteações"
+                            android:textSize="22sp"
+                            android:textStyle="bold"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_height="0.7dp"
+                            android:background="@color/cardview_shadow_start_color"/>
+
+                        <TableLayout
+                            android:id="@+id/tlHistoricoAlteracoes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:orientation="vertical">
+                        </TableLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvGradeCor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    app:cardElevation="3dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="false"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp">
+
+                        <TextView
+                            android:id="@+id/tvGradeCor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_titulo"
+                            android:textStyle="bold"
+                            android:text="@string/frag_cp_gradecor"/>
+
+                        <View
+                            android:id="@+id/vDividerGrade"
+                            android:layout_below="@+id/tvGradeCor"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_height="0.7dp"
+                            android:background="@color/cardview_shadow_start_color"/>
+
+                        <TextView
+                            android:id="@+id/tvProdutoSemEstoque"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/vDividerGrade"
+                            android:paddingTop="10dp"
+                            android:gravity="center"
+                            android:textSize="@dimen/text_size_subtitulo"
+                            android:visibility="gone"
+                            android:text="@string/frag_cp_produto_sem_estoque"/>
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_below="@+id/vDividerGrade"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvCores"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:cacheColorHint="@android:color/transparent"
+                                android:clipToPadding="false"
+                                android:divider="@null"
+                                android:dividerHeight="0dp"
+                                android:listSelector="@android:color/transparent"
+                                android:scrollbars="vertical"
+                                android:scrollbarStyle="outsideOverlay" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

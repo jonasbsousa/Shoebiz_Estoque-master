@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ColetorFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <Spinner
+                android:id="@+id/sOperacoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/style_spinner_motivo_desistencia">
+            </Spinner>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etCodProd"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:hint="@string/coletor_codigo_produto"
+                    android:textSize="@dimen/text_size_3"
+                    android:textAlignment="center"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:inputType="none"
+                    tools:ignore="Autofill,LabelFor" />
+
+                <ImageButton
+                    android:id="@+id/ibPesquisaCamera"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="-10dp"
+                    android:padding="2dp"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@string/vazio"
+                    android:src="@drawable/ic_local_see_black"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="60dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSemProd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/coletor_sem_produtos_coletado"
+                android:textSize="@dimen/text_size_3" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvProdutos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    android:clipToPadding="false"/>
+            </androidx.core.widget.NestedScrollView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="-50dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bLimpar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_ripple_effect"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:text="@string/limpar"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/bEnviar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/button_ripple_effect"
+                android:textColor="@color/white"
+                tools:ignore="ButtonStyle,RelativeOverlap"
+                android:textSize="12sp"
+                android:text="@string/enviar"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

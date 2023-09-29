@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="br.com.shoebiz.shoeconf_2">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="Android.permission.CAMERA" />
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+
+    <application
+        android:name=".ShoebizApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logo_app_estoque"
+        android:label="@string/app_name_2"
+        android:roundIcon="@drawable/logo_app_estoque"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Shoebiz"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        tools:targetApi="m">
+
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenSb">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name_2"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Shoebiz.NoActionBar.NavDrawer" />
+
+        <activity
+            android:name=".activity.ConfiguracoesActivity"
+            android:label="@string/title_activity_configuracoes"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Shoebiz.NoActionBar">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.shoebiz.shoeconf_2.activity.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".activity.EntradaMercadoriaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Shoebiz.NoActionBar" />
+
+        <activity
+            android:name=".activity.AlteracaoPrecoActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Shoebiz.NoActionBar" />
+
+        <activity
+            android:name=".activity.AreasColetadasActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Shoebiz.NoActionBar" />
+
+        <activity
+            android:name=".activity.EntradaTransfActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Shoebiz.NoActionBar" />
+
+        <activity
+            android:name=".activity.ColetaOtActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Shoebiz.NoActionBar" />
+
+        <activity
+            android:name=".activity.CustomScannerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Shoebiz.NoActionBar">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.shoebiz.shoeconf_2.activity.MainActivity" />
+        </activity>
+
+        <service
+            android:name=".utils.MessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo_notification" />
+    </application>
+
+</manifest>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Gerais">
+
+        <EditTextPreference
+            android:key="PREF_COD_LOJA"
+            android:title="Código da Loja"/>
+
+        <EditTextPreference
+            android:key="PREF_DESC_FIL"
+            android:title="Descrição da Filial"/>
+
+        <EditTextPreference
+            android:key="PREF_DESC_EMP"
+            android:title="Descrição da empresa"/>
+
+        <EditTextPreference
+            android:key="PREF_PERFIL_ACESSO"
+            android:title="Perfil de Acesso"/>
+
+        <EditTextPreference
+            android:key="PREF_ULTIMO_ACESSO"
+            android:title="Último Acesso"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Inventário">
+
+        <EditTextPreference
+            android:key="PREF_INVENTARIO_COD"
+            android:title="Código"/>
+
+        <EditTextPreference
+            android:key="PREF_INVENTARIO_OPERADOR_COD"
+            android:title="Código operador"/>
+
+        <EditTextPreference
+            android:key="PREF_INVENTARIO_OPERADOR_NOME"
+            android:title="Nome operador"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Liberação">
+
+        <EditTextPreference
+            android:key="PREF_LIB_COD"
+            android:title="Código da Liberação"/>
+
+        <EditTextPreference
+            android:key="PREF_LIB_TOKEN"
+            android:title="Token da Liberação"/>
+
+        <EditTextPreference
+            android:key="PREF_SOL_TOKEN"
+            android:title="Token da Solicitação"/>
+    </PreferenceCategory>
+</PreferenceScreen>

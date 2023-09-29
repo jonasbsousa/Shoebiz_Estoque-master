@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="br.com.shoebiz.shoeconf_2.fragment.InventarioMarcaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/codigo_do_produto"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etCodigoProduto"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:maxLines="1"
+            android:lines="1"
+            tools:ignore="LabelFor"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/qunt_prod_colet"
+                android:textAlignment="center"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvQuantProd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:text="@string/numero_zero"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="30dp">
+
+            <Button
+                android:id="@+id/bLimpar"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:text="@string/limpar"/>
+
+            <Button
+                android:id="@+id/bEnviar"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="?attr/colorPrimary"
+                android:textColor="@color/white"
+                tools:ignore="RelativeOverlap"
+                android:textSize="12sp"
+                android:text="@string/enviar"/>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

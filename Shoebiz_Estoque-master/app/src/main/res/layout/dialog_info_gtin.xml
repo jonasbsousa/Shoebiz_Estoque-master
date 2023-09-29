@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+
+            <include layout="@layout/include_toolbar" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    app:cardElevation="3dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="false"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/tvCor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="@string/frag_vd_cor"
+                            android:textColor="?attr/colorPrimaryDark"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/vDividerCor"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:layout_below="@id/tvCor"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/cardview_shadow_start_color"
+                            card_view:ignore="PrivateResource" />
+
+                        <TextView
+                            android:id="@+id/tvTxtDescCorErp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_below="@+id/vDividerCor"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:text="@string/frag_cp_desc_cor_erp"/>
+
+                        <TextView
+                            android:id="@+id/tvDescCorErp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/vDividerCor"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="5dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:layout_toEndOf="@+id/tvTxtDescCorErp"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvTxtDescCorForn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvDescCorErp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:text="@string/frag_cp_desc_cor_fornecedor"/>
+
+                        <TextView
+                            android:id="@+id/tvDescCorForn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvDescCorErp"
+                            android:layout_toEndOf="@+id/tvTxtDescCorForn"
+                            android:layout_marginStart="5dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    app:cardElevation="3dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="false"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/tvGrade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="@string/frag_vd_grade"
+                            android:textColor="?attr/colorPrimaryDark"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/vDividerGrade"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:layout_below="@id/tvGrade"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/cardview_shadow_start_color"
+                            card_view:ignore="PrivateResource" />
+
+                        <HorizontalScrollView
+                            android:layout_below="@+id/vDividerGrade"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tvDescTamanho"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/text_size_1"
+                                    android:textStyle="bold"
+                                    android:text="@string/tamanho"/>
+
+                                <TextView
+                                    android:id="@+id/tvAptTamanho"
+                                    android:layout_below="@+id/tvDescTamanho"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/text_size_1"
+                                    android:textStyle="bold"
+                                    android:text="@string/qantidade"/>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvGrade"
+                                    android:layout_toEndOf="@+id/tvDescTamanho"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:cacheColorHint="@android:color/transparent"
+                                    android:clipToPadding="false"
+                                    android:divider="@null"
+                                    android:dividerHeight="0dp"
+                                    android:listSelector="@android:color/transparent"
+                                    android:scrollbars="vertical"
+                                    android:scrollbarStyle="outsideOverlay" />
+
+                                <RelativeLayout
+                                    android:layout_toEndOf="@+id/rvGrade"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/tvTxtQuantTotal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/text_size_1"
+                                        android:textStyle="bold"
+                                        android:text="@string/total"
+                                        card_view:ignore="TooDeepLayout" />
+
+                                    <TextView
+                                        android:id="@+id/tvQuantTotal"
+                                        android:layout_below="@+id/tvTxtQuantTotal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:textStyle="bold"
+                                        android:textSize="@dimen/text_size_1"/>
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </HorizontalScrollView>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    app:cardElevation="3dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="false"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/tvGtin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="@string/frag_vd_codigo_gtin"
+                            android:textColor="?attr/colorPrimaryDark"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/vDividerGtin"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.7dp"
+                            android:layout_below="@id/tvGtin"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/cardview_shadow_start_color"
+                            card_view:ignore="PrivateResource" />
+
+                        <LinearLayout
+                            android:id="@+id/llCabecalho"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/vDividerGtin"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:background="#1fffffff"
+                            android:orientation="horizontal"
+                            android:baselineAligned="false">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:text="@string/frag_vd_gtin"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="-20dp"
+                                android:layout_weight="2">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:text="@string/frag_vd_numero"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:layout_marginStart="10dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:text="@string/frag_vd_quant"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/llCabecalho">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvGtin"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:cacheColorHint="@android:color/transparent"
+                                android:clipToPadding="false"
+                                android:divider="@null"
+                                android:dividerHeight="8dp"
+                                android:listSelector="@android:color/transparent"
+                                android:scrollbarStyle="outsideOverlay"
+                                android:scrollbars="vertical"/>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

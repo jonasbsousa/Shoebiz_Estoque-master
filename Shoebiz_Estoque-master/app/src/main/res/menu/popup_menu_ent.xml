@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_ent_excluir"
+        android:title="@string/popup_ent_exclui" />
+
+    <item
+        android:id="@+id/menu_ent_quantidade"
+        android:title="@string/popup_ent_quantidade" />
+</menu>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/coletor"
+            android:textColor="@color/colorPrimaryText"
+            android:textStyle="bold"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/tvContagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tvTitulo"
+            android:layout_marginStart="10dp"
+            android:text="@string/coletor_contagem"
+            android:paddingTop="6dp"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/coletor_departamento"
+        android:textSize="13sp"/>
+
+    <Spinner
+        android:id="@+id/sDepartamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/style_spinner_motivo_desistencia">
+    </Spinner>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/coletor_observacao"
+        android:textSize="14sp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilObservacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextInputLayoutStyle">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:inputType="text|textMultiLine"
+            tools:ignore="Autofill,LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/bCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/bConfirmar"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="10dp"
+            android:textColor="?attr/colorPrimaryDark"
+            android:text="@string/cancelar" />
+
+        <Button
+            android:id="@+id/bConfirmar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:textColor="?attr/colorPrimaryDark"
+            android:text="@string/confirmar" />
+    </RelativeLayout>
+</LinearLayout>

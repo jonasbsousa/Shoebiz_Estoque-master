@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvCabecPasso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size_3"
+        android:textStyle="bold"
+        android:text="Passo 1"/>
+
+    <TextView
+        android:id="@+id/tvCabecDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size_titulo_2"
+        android:textStyle="bold"
+        android:text="Confira os dados da nota"/>
+</LinearLayout>

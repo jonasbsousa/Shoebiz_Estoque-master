@@ -1,0 +1,7 @@
+<resources>
+    <style name="AppTheme.Shoebiz.NoActionBar.NavDrawer">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/colorSbPrimaryDarkTransparent</item>
+    </style>
+</resources>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.shoebiz.shoeconf_2.activity.SplashScreenActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlSolicitaAcesso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivFundoSplashScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_splash_screen_shoebiz"
+            android:contentDescription="@string/image_splash_screen"/>
+
+        <ImageView
+            android:id="@+id/ivLogoSplashScreen"
+            android:padding="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo_shoebiz"
+            android:contentDescription="@string/image_logo"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llLiberarAcesso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="200dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btLiberarAcesso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/style_ss_button"
+            android:text="@string/splash_button_solicitarAcesso"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSemAcessoAoSrv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="200dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btSemAcessoAoSrv"
+            android:layout_width="match_parent"
+            android:layout_height ="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/style_ss_button"
+            android:text="@string/splash_button_acessar"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llProcessando"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="200dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <ProgressBar
+                android:id="@+id/pbProcessando"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:indeterminate="true"
+                android:indeterminateTint="?attr/colorPrimary"
+                android:indeterminateTintMode="src_in"/>
+
+            <TextView
+                android:id="@+id/tvAguarde"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/aguarde"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_toEndOf="@+id/pbProcessando"/>
+
+            <TextView
+                android:id="@+id/tvDescAguarde"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_below="@+id/tvAguarde"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_toEndOf="@+id/pbProcessando"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSolicitadoAcesso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="220dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/tvSolicitadoAcesso1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="21sp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tvSolicitadoAcesso2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSolicitadoAcesso1"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/btVerifAcesso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/style_ss_button"
+                android:textColor="@color/white"
+                android:text="@string/splash_button_verif_acesso"
+                android:layout_below="@+id/tvSolicitadoAcesso2"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAlerta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="220dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/tvAlerta1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="21sp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tvAlerta2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAlerta1"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textAlignment="center"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLoginEmpresa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="200dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/style_ll_login"
+            android:paddingBottom="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:id="@+id/llSelecionaFilial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/sEmpresa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/style_spinner"/>
+
+                <Spinner
+                    android:id="@+id/sFiliais"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/style_spinner"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btAcessarEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/style_ss_button"
+                android:textColor="@color/white"
+                android:text="@string/splash_button_acessar"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLoginFilial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="200dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btAcessarFilial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/style_ss_button"
+            android:text="@string/splash_button_acessar"/>
+    </LinearLayout>
+</RelativeLayout>

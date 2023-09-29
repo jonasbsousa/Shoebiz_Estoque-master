@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/grupo_principal"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_drawer_valida_danfe"
+            android:icon="@drawable/ic_description_black"
+            android:title="@string/nav_valida_danfe"
+            android:checked="true"/>
+
+        <item
+            android:id="@+id/nav_drawer_entrada_mercadoria"
+            android:icon="@drawable/ic_description_black"
+            android:title="@string/nav_entrada_mercadori"
+            android:checked="true" />
+
+        <item
+            android:id="@+id/nav_drawer_trans_mercadoria"
+            android:icon="@drawable/ic_swap_horiz_black"
+            android:title="@string/nav_transf_mercadoria"
+            android:checked="true"
+            app:actionViewClass="android.widget.TextView"/>
+
+        <item
+            android:id="@+id/nav_drawer_alteracao_preco"
+            android:icon="@drawable/ic_swap_vert_black"
+            android:title="@string/nav_alteracao_preco"
+            android:checked="true" />
+
+        <item
+            android:id="@+id/nav_drawer_consult_prod"
+            android:icon="@drawable/ic_search_black"
+            android:title="@string/nav_consult_prod"
+            android:checked="true"/>
+
+        <item
+            android:id="@+id/nav_drawer_inventario"
+            android:icon="@drawable/ic_assignment_black"
+            android:title="@string/nav_inventario"
+            android:checked="true"/>
+
+        <item
+            android:id="@+id/nav_drawer_inventario_marca"
+            android:icon="@drawable/ic_assignment_black"
+            android:title="@string/nav_inventario_marca"
+            android:checked="true"/>
+
+        <item
+            android:id="@+id/nav_drawer_coletor"
+            android:icon="@drawable/ic_coletor_black"
+            android:title="@string/nav_coletor"
+            android:checked="true"/>
+
+        <item
+            android:id="@+id/nav_drawer_coleta_gtin"
+            android:icon="@drawable/ic_barcode_scan_black"
+            android:title="@string/nav_coleta_gtin"
+            android:checkable="true"/>
+    </group>
+
+    <group
+        android:id="@+id/grupo_config">
+
+        <item
+            android:id="@+id/nav_drawer_configuracoes"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/nav_configuracoes"/>
+
+        <item
+            android:id="@+id/nav_drawer_sair"
+            android:icon="@drawable/ic_exit_to_app"
+            android:title="@string/nav_sair"/>
+    </group>
+</menu>

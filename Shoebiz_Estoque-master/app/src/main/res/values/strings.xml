@@ -1,0 +1,346 @@
+<resources>
+    <string name="app_name">ShoeConf</string>
+    <string name="app_name_2">Shoe Conf</string>
+
+    <string name="SHOEBIZ">SHOEBIZ</string>
+    <string name="SHOEBIZ_COMERCIO">SHOEBIZ COMERCIO</string>
+
+    <!-- Status nota de entrada -->
+    <string name="status_nota_finalizado">Finalizado</string>
+    <string name="status_nota_pendente">Pendente</string>
+    <string name="status_nota_a_receber">À Receber</string>
+
+    <!-- Status nota de transferencia -->
+    <string name="status_transf_ot_aberto">Aberto</string>
+    <string name="status_transf_ot_pendente">Pendente</string>
+    <string name="status_transf_pendente">Pendente</string>
+    <string name="status_transf_recebido">Recebido</string>
+
+    <!-- Operação transferencia -->
+    <string name="op_transf_ot">O</string>
+    <string name="op_transf_nota">N</string>
+
+    <!-- Forma coleta -->
+    <string name="forma_coleta_cod_shoebiz">SHOE</string>
+    <string name="forma_coleta_gtin">GTIN</string>
+    <string name="forma_coleta_hibrido">HIBR</string>
+
+    <!-- Activity SplashScreen -->
+    <string name="splash_numero_vendedor">Número do Vendedor</string>
+    <string name="splash_button_acessar">Acessar</string>
+    <string name="splash_button_verif_acesso">Verifica Acesso</string>
+    <string name="splash_button_solicitarAcesso">Solicitar Acesso</string>
+    <string name="enviando_solicitacao">Enviando solicitação!</string>
+    <string name="verificando_solicitacao">Verificando solicitação!</string>
+    <string name="image_splash_screen">Imagem splash screen</string>
+    <string name="image_logo">Imagem Logo</string>
+    <string name="num_codigo">Código: %s</string>
+
+    <!-- Activity incluir danfe -->
+    <string name="titulo_incluir_danfe">Incluir Nota</string>
+    <string name="titulo_alteracao_preco">Alteração de Preço</string>
+    <string name="titulo_areas_coletadas">Áreas Coletadas</string>
+    <string name="titulo_recebe_transferencia">Recebe Transferência</string>
+    <string name="titulo_coleta_ot">Coletar Ot</string>
+    <string name="titulo_custom_scanner">Scanner</string>
+
+    <!-- Activity incluir danfe -->
+    <string name="titulo_coletor">Coletor</string>
+
+    <!-- Menu flutuante -->
+    <string name="action_about">Sobre</string>
+    <string name="action_filter">Filtro</string>
+    <string name="carrega_produtos">Atualiza Produtos</string>
+    <string name="areas_coletadas">Áreas Coletadas</string>
+    <string name="status_inventario">Status</string>
+
+    <!-- String para o box sobre -->
+    <string name="about_dialog_title">Shoe Conf</string>
+    <string name="about_dialog_text">
+        <![CDATA[
+        <b>Aplicativo Shoe Conf</b><br>
+        Versao %s<br><br>
+        <a href="http://www.shoebiz.com.br">http://www.shoebiz.com.br</a><br><br>
+            ]]>
+	</string>
+
+    <!-- Nav Drawer -->
+    <string name="nav_consult_prod">Consulta Produto</string>
+    <string name="nav_valida_danfe">Valida Danfe</string>
+    <string name="nav_alteracao_preco">Alteração de Preço</string>
+    <string name="nav_entrada_mercadori">Entrada de Mercadoria</string>
+    <string name="nav_consulta_produto">Consulta Produto</string>
+    <string name="nav_transf_mercadoria">Transferência</string>
+    <string name="nav_inventario">Inventário</string>
+    <string name="nav_inventario_marca">Inventário por Marca</string>
+    <string name="nav_coletor">Coletor</string>
+    <string name="nav_coleta_gtin">Coleta GTIN</string>
+    <string name="nav_configuracoes">Configurações</string>
+    <string name="nav_sair">Sair</string>
+
+    <!-- Texto da fragment consulta produto -->
+    <string name="frag_cp_sem_produto">Sem produto pesquisado!</string>
+    <string name="frag_cp_codigo_produto">Código do produto</string>
+    <string name="frag_cp_gradecor">"Grade/Cor</string>
+    <string name="frag_cp_historico_alt">Alterações</string>
+    <string name="frag_cp_informacoes">Informações</string>
+    <string name="frag_cp_foto">Foto</string>
+    <string name="frag_cp_descricao">Descrição:</string>
+    <string name="frag_cp_codigo">Código:</string>
+    <string name="frag_cp_grupo">Grupo:</string>
+    <string name="frag_cp_marca">Marca:</string>
+    <string name="frag_cp_cod_resu">Cód. Resu.:</string>
+    <string name="frag_cp_preco">Preço:</string>
+    <string name="frag_cp_tamanho">Tamanho:</string>
+    <string name="frag_cp_qntPares">Qnt. Pares:</string>
+    <string name="frag_cp_descGrupo">%1$s - %2$s</string>
+    <string name="frag_cp_descCor">%1$s - %2$s</string>
+    <string name="frag_cp_descTamanho">%1$s à %2$s</string>
+    <string name="frag_cp_preco_de">De (R$):</string>
+    <string name="frag_cp_preco_por">Por (R$):</string>
+    <string name="frag_cp_preco_shoecard">Shoebiz Card (R$):</string>
+    <string name="frag_cp_produto_sem_estoque">Produto sem estoque!</string>
+    <string name="frag_cp_desc_cor_erp">Desc. Erp:</string>
+    <string name="frag_cp_desc_cor_fornecedor">Desc. Forn.:</string>
+    <string name="frag_cp_ultimas_alteações">Ultimas Alterações</string>
+
+    <!-- Texto da fragment valida danfe -->
+    <string name="frag_vd_sem_danfe">Sem danfe pesquisada!</string>
+    <string name="frag_vd_informacoes">Informações</string>
+    <string name="frag_vd_NumDanfe">Nº Danfe:</string>
+    <string name="frag_vd_emissao">Emissão:</string>
+    <string name="frag_vd_cod_for">Cód. For.:</string>
+    <string name="frag_vd_Cnpj">Cnpj:</string>
+    <string name="frag_vd_fornecedor">Fornecedor:</string>
+    <string name="frag_vd_chave_danfe">Chave:</string>
+    <string name="frag_vd_Loja">Loja:</string>
+    <string name="frag_vd_dados_receb">Dados Recebimento</string>
+    <string name="frag_vd_hora">Hora:</string>
+    <string name="frag_vd_data">Data:</string>
+    <string name="frag_vd_dados_lib">Dados Liberação</string>
+    <string name="frag_vd_lib_user">\Usuário:</string>
+    <string name="frag_vd_lib_status">Status:</string>
+    <string name="frag_vd_pedido">Pedido - %s</string>
+    <string name="frag_vd_cod_produto">Cód. Prod.:</string>
+    <string name="frag_vd_sem_pedido">*** Pedido excluído, favor entrar em contato com o Compras! ***</string>
+    <string name="frag_vd_cod_Resumido">Cód. Res.:</string>
+    <string name="frag_vd_cod_Descricao">Descrição:</string>
+    <string name="frag_vd_cor_erp">Cor Erp:</string>
+    <string name="frag_vd_cor_fornecedor">Cor Forn.:</string>
+    <string name="frag_vd_desc">%1$s / %2$s</string>
+    <string name="popup_ent_exclui">Excluir</string>
+    <string name="popup_ent_quantidade">Quantidade</string>
+    <string name="frag_vd_grade_produto">Grade Produto</string>
+    <string name="frag_vd_cor">Cor</string>
+    <string name="frag_vd_grade">Grade</string>
+    <string name="frag_vd_codigo_gtin">Código Gtin</string>
+    <string name="frag_vd_gtin">Gtin</string>
+    <string name="frag_vd_numero">Número</string>
+    <string name="frag_vd_quant">Quant.</string>
+    <string name="frag_vd_não_cadastrado">Não cadastrado!</string>
+    <string name="frag_vd_chave_pesq">Chave DANFE</string>
+
+    <!-- Texto da fragment inventario -->
+    <string name="fi_codigo">Código</string>
+    <string name="fi_cadastro_de_produto">Cadastro de produto</string>
+    <string name="fi_ultima_atializacao">Última atualização:</string>
+    <string name="fi_data_hora_cad_prod">%1$s - %2$s</string>
+    <string name="fi_status">Status Cad.Produto:</string>
+    <string name="fi_areas_coletadas">Áreas coletadas (Qnt):</string>
+    <string name="fi_area">Área:</string>
+    <string name="fi_sem_inventario">Sem inventário aberto!</string>
+    <string name="fi_atualizado">Atualizado</string>
+    <string name="fi_desatualizado">Desatualizado</string>
+    <string name="fi_operador">Operador:</string>
+    <string name="fi_cancelar">Cancelar</string>
+    <string name="fi_fechar_area">Fechar Área</string>
+    <string name="fi_modo_online">Modo OnLine</string>
+    <string name="fi_cod_inventario">Cód. Inventário</string>
+
+    <!-- Fragment alteração de preço -->
+    <string name="frag_ap_data">Data:</string>
+    <string name="frag_ap_sem_alteracoes">Sem Alterações</string>
+    <string name="frag_ap_codigo">%1$s %2$s</string>
+    <string name="frag_ap_codigo_cod">%1$s %2$s %3$s</string>
+    <string name="frag_ap_alt_data">Dt.Alt.:</string>
+    <string name="frag_ap_quantidade">Qnt.</string>
+    <string name="frag_ap_preco_de">De (R$):</string>
+    <string name="frag_ap_preco_por">Por (R$):</string>
+    <string name="frag_ap_a">à</string>
+    <string name="frag_ap_cod_pai">Código Pai</string>
+    <string name="frag_ap_cor">Cor</string>
+
+    <!-- Fragment transferencia mercadoria -->
+    <string name="frag_tm_NumDanfe">Nº Nota: %1$s / %2$s</string>
+    <string name="frag_tm_NumOt">Nº Ot.: %s</string>
+    <string name="frag_tm_FilOrigem">Origem: %1$s - %2$s</string>
+    <string name="frag_tm_FilDestino">Destino: %1$s - %2$s</string>
+    <string name="frag_tm_descri">Descrição:</string>
+    <string name="frag_tm_emissao">Emissão:</string>
+    <string name="frag_tm_desc_1">%1$s / %2$s</string>
+    <string name="frag_tm_desc_2">%1$s - %2$s</string>
+    <string name="frag_tm_erro_processar">Erro ao processar</string>
+    <string name="frag_tm_processando">Processando…</string>
+
+    <!-- Fragment coleta gtin -->
+    <string name="frag_cg_codigo_produto">Código do Produto</string>
+    <string name="frag_cg_codigo_gtin">Código GTIN</string>
+    <string name="frag_cg_info_produto">Informações do Produto</string>
+    <string name="frag_cg_limpar">Limpar</string>
+    <string name="frag_cg_gravar">Gravar</string>
+    <string name="frag_cg_descricao">Descrição:</string>
+
+    <!-- Activity entrada mercadoria -->
+    <string name="acti_et_proximo">Próximo</string>
+    <string name="acti_et_voltar">Voltar</string>
+    <string name="acti_et_finalizar">Finalizar</string>
+    <string name="acti_et_passo1">Passo 1</string>
+    <string name="acti_et_passo2">Passo 2</string>
+    <string name="acti_et_passo3">Passo 3</string>
+    <string name="acti_et_passo1_desc">Confira os dados da nota</string>
+    <string name="acti_et_passo2_desc">Colete os produtos</string>
+    <string name="acti_et_passo3_desc">Analise a(s) divergência(s)</string>
+    <string name="acti_et_numeroNota">Nº Nota:</string>
+    <string name="acti_et_numeroOt">Nº Ot:</string>
+    <string name="acti_et_origem">Origem:</string>
+    <string name="acti_et_destino">Destino:</string>
+    <string name="acti_et_emissao">Emissão:</string>
+    <string name="acti_et_chave">Chave:</string>
+    <string name="acti_et_informações">Informações</string>
+    <string name="acti_et_produtos">Produtos</string>
+    <string name="acti_et_totais">Totais</string>
+    <string name="acti_et_qnt_pares">Qnt. Pares:</string>
+    <string name="acti_et_valor_total">Valor Total:</string>
+
+    <!-- Activity coleta ot -->
+    <string name="acti_co_passo1">Passo 1</string>
+    <string name="acti_co_passo2">Passo 2</string>
+    <string name="acti_co_passo3">Passo 3</string>
+    <string name="acti_co_numeroOt">Nº Ot:</string>
+    <string name="acti_co_origem">Origem:</string>
+    <string name="acti_co_destino">Destino:</string>
+    <string name="acti_co_emissao">Emissão:</string>
+    <string name="acti_co_passo1_desc">Confira os dados da Ot</string>
+    <string name="acti_co_passo2_desc">Colete o(s) Produto(s)</string>
+    <string name="acti_co_passo3_desc">Confira o(s) Produto(s)</string>
+    <string name="acti_co_prod_p">%s (Produto)</string>
+    <string name="acti_co_caixa_p">%s (Caixa)</string>
+    <string name="acti_co_qnt_prod_div">Qtd. Prod. Div.</string>
+    <string name="acti_co_qnt_linhas">Qtd. Linhas</string>
+    <string name="acti_co_qnt_pares">Qtd. Pares</string>
+    <string name="acti_co_qnt_total">%s (TOTAL)</string>
+    <string name="acti_co_codigo">Cód: %s</string>
+    <string name="acti_co_grupo">Grupo: %s</string>
+    <string name="acti_co_gtin">Gtin: %s</string>
+    <string name="acti_co_dois_texto">%1$s - %2$s</string>
+
+    <!-- Cabeçado da tabela do historico das alterações de preço -->
+    <string name="table_revisao">Revisão</string>
+    <string name="table_date">Data</string>
+    <string name="table_preco_de">Preço De</string>
+    <string name="table_preco_ate">Preço Por</string>
+
+    <!-- Status da integracao -->
+    <string name="status_integrado_sim">Sim</string>
+    <string name="status_integrado_nao">Nao</string>
+
+    <!-- Texto da fragment Inclui nota -->
+    <string name="fci_qnt_produto">Qnt. produto(s)</string>
+
+    <!-- Texto com menu fragment danfe -->
+    <string name="popup_danfe_ocorrencia">Ocorrência</string>
+
+    <!-- Texto com menu fragment transferencia de mercadoria -->
+    <string name="popup_transf_visualizar">Visualizar</string>
+    <string name="popup_transf_receber">Receber</string>
+    <string name="popup_ot_coletar">Coletar</string>
+
+    <!-- Texto para a feature coletor -->
+    <string name="coletor">Coletor</string>
+    <string name="coletor_status_defeito_analise">D</string>
+    <string name="coletor_status_gato_pequeimado">G</string>
+    <string name="coletor_status_contagem">C</string>
+    <string name="coletor_status_etiqueta">E</string>
+    <string name="coletor_defeito_analise">Defeito/Analise</string>
+    <string name="coletor_gato_pequeimado">Gato/Pé Queimado</string>
+    <string name="coletor_contagem">Contagem</string>
+    <string name="coletor_etiqueta">Etiqueta</string>
+    <string name="coletor_operacao">Operação:</string>
+    <string name="coletor_codigo_produto">Código do produto</string>
+    <string name="coletor_sem_produtos_coletado">Sem Produto(s) Coletado</string>
+    <string name="coletor_departamento">Departamento</string>
+    <string name="coletor_observacao">Observação</string>
+    <string name="coletor_prevencao">Prevenção à perdas</string>
+    <string name="coletor_compras">Compras</string>
+
+    <!-- Outros -->
+    <string name="filtro_grupo">Filtro por grupo</string>
+    <string name="escritorio">Escritorio</string>
+    <string name="loja">Loja</string>
+    <string name="rv_textoSemNota">Não possui nota(s) %s(s)</string>
+    <string name="rv_textoSemOt">Não possui Ot(s) %s(s)</string>
+    <string name="rv_no_textoQuant">Qnt.: %s</string>
+    <string name="ok">OK</string>
+    <string name="vazio"> </string>
+    <string name="rv_nTextoQuant">Qnt.: %s</string>
+    <string name="rv_nTextoCor">Cor: %s</string>
+    <string name="rv_nTextoTam">Tam.: %s</string>
+    <string name="sem_produtos">Sem Produto(s)</string>
+    <string name="sem_produtos_div">Sem Produto(s) Divergente</string>
+    <string name="codigo_do_produto">Código do Produto</string>
+    <string name="qunt_prod_colet">Qnt. Produtos:</string>
+    <string name="codigo_caixa_produto">Cód. Caixa ou Produto</string>
+    <string name="codigo_da_area">Código da Área</string>
+    <string name="nota_confirmar">Confirmar</string>
+    <string name="nota_concelar">Cancelar</string>
+    <string name="nota_cancelar">Excluír</string>
+    <string name="chave_da_nota">Chave da nota</string>
+    <string name="motivo_ocorrencia">Motivo</string>
+    <string name="detalhes_ocorrencia">Detalhes da ocorrência</string>
+    <string name="ocorrencia">Ocorrência</string>
+    <string name="status">Status</string>
+    <string name="quantidade">Quantidade</string>
+    <string name="quant_volume">Qnt. Volume(s)</string>
+    <string name="incluir">incluir</string>
+    <string name="fechar">fechar</string>
+    <string name="codido_do_produto">Códido do produto</string>
+    <string name="operacao">Operação</string>
+    <string name="nota_de_entrada">Nota de entrada</string>
+    <string name="inventario_pontual">Inventario Pontual</string>
+    <string name="aguarde">Aguarde</string>
+    <string name="title_activity_configuracoes">Configurações</string>
+    <string name="tamanho">Tam.</string>
+    <string name="qantidade">Qnt.</string>
+    <string name="cor">Cor:</string>
+    <string name="quant">Qnt.:</string>
+    <string name="tam">Tam.:</string>
+    <string name="pesquisando">Pesquisando…</string>
+    <string name="total">Total</string>
+    <string name="title_activity_coletor">ColetorActivity</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="cancelar">Cancela</string>
+    <string name="aplicar">Aplicar</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="limpar">Limpar</string>
+    <string name="enviar">Enviar</string>
+    <string name="processando">Processando…</string>
+    <string name="erro_processar">NOTA COM ERRO</string>
+    <string name="dias_parado">Parado %s dia(s)</string>
+    <string name="ativo">Ativo</string>
+    <string name="inativo">Inativo</string>
+    <string name="novas_ot">%1$s nova%2$s</string>
+    <string name="numero_zero">0</string>
+    <string name="erro_produto_transf">Produto não encontrado na nota</string>
+    <string name="data">Data</string>
+    <string name="de">De:</string>
+    <string name="ate">Até:</string>
+    <string name="dois_traco">%1$s - %2$s</string>
+    <string name="zxing_custom_msg_default_status">Alinhar código de barras para ser lido.</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <string-array name="empresas">
+        <item>Shoebiz</item>
+    </string-array>
+</resources>

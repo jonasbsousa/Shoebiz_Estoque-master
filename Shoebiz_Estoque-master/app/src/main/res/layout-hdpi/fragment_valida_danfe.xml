@@ -1,0 +1,507 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="5"
+            android:background="@drawable/custom_search"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/vazio"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_search_black"/>
+
+            <EditText
+                android:id="@+id/etChaveDanfe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/transparent"
+                android:textSize="20sp"
+                android:hint="@string/frag_vd_chave_pesq"
+                android:inputType="text"
+                android:maxLines="1"
+                android:lines="1"
+                android:scrollHorizontally="true"
+                android:ellipsize="end"
+                android:importantForAutofill="no"
+                card_view:ignore="Autofill" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ibPesquisaCamera"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="-10dp"
+            android:padding="2dp"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="@string/vazio"
+            android:src="@drawable/ic_local_see_black"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSemDanfe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_subtitulo"
+        android:text="@string/frag_vd_sem_danfe" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nscDescInfoDanfe"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:scrollbars="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                app:cardElevation="3dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="false"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/tvInformacoes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/frag_vd_informacoes"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_size_titulo"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/vDividerProdutos"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:layout_below="@id/tvInformacoes"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/cardview_shadow_start_color" />
+
+                    <TextView
+                        android:id="@+id/tvTxtLoja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/vDividerProdutos"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/frag_vd_Loja"
+                        android:textSize="@dimen/text_size_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvLoja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/vDividerProdutos"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/tvTxtLoja"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_1" />
+
+                    <TextView
+                        android:id="@+id/tvTxtNumNota"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTxtLoja"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/frag_vd_NumDanfe"
+                        android:textSize="@dimen/text_size_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvNumNota"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTxtLoja"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/tvTxtNumNota"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_1" />
+
+                    <TextView
+                        android:id="@+id/tvTxtEmissao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvTxtLoja"
+                        android:layout_marginTop="5dp"
+                        android:layout_toStartOf="@+id/tvEmissao"
+                        android:text="@string/frag_vd_emissao"
+                        android:textSize="@dimen/text_size_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvEmissao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/tvTxtLoja"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_1" />
+
+                    <TextView
+                        android:id="@+id/tvTxtCodFor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTxtNumNota"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/frag_vd_cod_for"
+                        android:textSize="@dimen/text_size_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvCodFor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTxtNumNota"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/tvTxtCodFor"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_1" />
+
+                    <TextView
+                        android:id="@+id/tvTxtCnpj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvTxtEmissao"
+                        android:layout_marginTop="5dp"
+                        android:layout_toStartOf="@+id/tvCnpj"
+                        android:text="@string/frag_vd_Cnpj"
+                        android:textSize="@dimen/text_size_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvCnpj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/tvTxtEmissao"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_1" />
+
+                    <TextView
+                        android:id="@+id/tvTxtFornecedor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTxtCodFor"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/frag_vd_fornecedor"
+                        android:textSize="@dimen/text_size_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvFornecedor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTxtCodFor"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/tvTxtFornecedor"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_1" />
+
+                    <TextView
+                        android:id="@+id/tvTxtChaveDanfe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvFornecedor"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/frag_vd_chave_danfe"
+                        android:textSize="@dimen/text_size_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvChaveDanfe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvFornecedor"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/tvTxtChaveDanfe"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_1" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                app:cardElevation="3dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="false"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/tvDadosLib"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="@string/frag_vd_dados_lib"
+                        android:textSize="@dimen/text_size_titulo"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:id="@+id/vDividerlib"
+                        android:layout_below="@id/tvDadosLib"
+                        android:background="@color/cardview_shadow_start_color"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_height="0.7dp" />
+
+                    <TextView
+                        android:id="@+id/tvTxtLibUser"
+                        android:layout_below="@id/vDividerlib"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/frag_vd_lib_user"
+                        android:textSize="@dimen/text_size_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvLibUser"
+                        android:layout_below="@id/vDividerlib"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/tvTxtLibUser"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_1"/>
+
+                    <TextView
+                        android:id="@+id/tvTxtLibData"
+                        android:layout_below="@id/tvTxtLibUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/frag_vd_data"
+                        android:textSize="@dimen/text_size_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvLibData"
+                        android:layout_below="@id/tvTxtLibUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/tvTxtLibData"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_1"/>
+
+                    <TextView
+                        android:id="@+id/tvTxtLibHora"
+                        android:layout_below="@+id/tvTxtLibUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_toStartOf="@+id/tvLibHora"
+                        android:text="@string/frag_vd_hora"
+                        android:textSize="@dimen/text_size_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvLibHora"
+                        android:layout_below="@+id/tvTxtLibUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_1" />
+
+                    <TextView
+                        android:id="@+id/tvTxtLibstatus"
+                        android:layout_below="@id/tvLibData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/frag_vd_lib_status"
+                        android:textSize="@dimen/text_size_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvLibstatus"
+                        android:layout_below="@id/tvLibData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/tvTxtLibUser"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_1"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                app:cardElevation="3dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="false"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/tvDadosReceb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="@string/frag_vd_dados_receb"
+                        android:textSize="@dimen/text_size_titulo"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:id="@+id/vDividerReceb"
+                        android:layout_below="@id/tvDadosReceb"
+                        android:background="@color/cardview_shadow_start_color"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_height="0.7dp" />
+
+
+                    <TextView
+                        android:id="@+id/tvTxtRecebData"
+                        android:layout_below="@id/vDividerReceb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/frag_vd_data"
+                        android:textSize="@dimen/text_size_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvRecebData"
+                        android:layout_below="@id/vDividerReceb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/tvTxtRecebData"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_1"/>
+
+                    <TextView
+                        android:id="@+id/tvTxtRecebHora"
+                        android:layout_below="@+id/vDividerReceb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_toStartOf="@+id/tvRecebHora"
+                        android:text="@string/frag_vd_hora"
+                        android:textSize="@dimen/text_size_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvRecebHora"
+                        android:layout_below="@+id/vDividerReceb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_1" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPedidos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:clipToPadding="false"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="outsideOverlay" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.shoebiz.shoeconf_2.activity.EntradaMercadoriaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/ablCabecIncluiDanfe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tvTxtNumNota"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/frag_vd_NumDanfe"
+                        android:textSize="@dimen/text_size_3"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvNumNota"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/tvTxtNumNota"
+                        android:layout_marginStart="5dp"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_3" />
+
+                    <TextView
+                        android:id="@+id/tvTxtFornecedor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTxtNumNota"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/frag_vd_fornecedor"
+                        android:textSize="@dimen/text_size_3"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvFornecedor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTxtNumNota"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/tvTxtFornecedor"
+                        android:singleLine="true"
+                        android:textSize="@dimen/text_size_3"/>
+
+                    <View
+                        android:id="@+id/vDividerProdutos"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:layout_below="@id/tvFornecedor"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorSecondaryText" />
+
+                    <TextView
+                        android:id="@+id/tvTxtQntProdutos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/vDividerProdutos"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/fci_qnt_produto"
+                        android:textSize="@dimen/text_size_3"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvQntProdutos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vDividerProdutos"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/text_size_3" />
+                </RelativeLayout>
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp">
+
+            <TextView
+                android:id="@+id/tvSemProduto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/sem_produtos"
+                android:textSize="@dimen/text_size_3"
+                android:gravity="center" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvNota"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"/>
+                </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="bottom">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/ablRodIncluiDanfe"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etCodigoProduto"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:hint="@string/codigo_do_produto"
+                    android:textSize="@dimen/text_size_3"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:focusable="true"/>
+
+                <ImageButton
+                    android:id="@+id/ibLimpaLista"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:contentDescription="@string/vazio"
+                    android:background="@null"
+                    android:src="@drawable/ic_delete_white"
+                    android:adjustViewBounds="true"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

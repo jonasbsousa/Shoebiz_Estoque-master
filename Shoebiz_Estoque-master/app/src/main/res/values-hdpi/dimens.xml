@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="popup_incluichave_width">350dp</dimen>
+    <dimen name="popup_incluichave_height">280dp</dimen>
+
+    <!-- FAB -->
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="font_size_table">12sp</dimen>
+    <dimen name="font_size_dialog_alt_prc">16sp</dimen>
+
+    <dimen name="text_size_1">12sp</dimen>
+    <dimen name="text_size_2">14sp</dimen>
+    <dimen name="text_size_3">16sp</dimen>
+    <dimen name="text_size_titulo">20sp</dimen>
+    <dimen name="text_size_titulo_2">22sp</dimen>
+    <dimen name="text_size_subtitulo">18sp</dimen>
+</resources>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/etDataDeAlteracao"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:ems="10"
+                android:inputType="date"
+                android:enabled="false"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_size_3"
+                android:gravity="center"
+                tools:ignore="LabelFor"
+                android:focusable="false"
+                android:autofillHints="" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/frag_ap_a"
+                android:textSize="@dimen/text_size_3"/>
+
+            <EditText
+                android:id="@+id/etDataAteAlteracao"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:ems="10"
+                android:inputType="date"
+                android:enabled="false"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_size_3"
+                android:gravity="center"
+                tools:ignore="LabelFor"
+                android:focusable="false"
+                android:autofillHints="" />
+
+            <ImageButton
+                android:id="@+id/ibCalendario"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/vazio"
+                android:background="@null"
+                android:src="@drawable/ic_search_black"
+                android:adjustViewBounds="true"
+                android:foreground="?android:selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                tools:targetApi="m" />
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nscAlteracaoPreco"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/llAlteracaoPrecoPai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="24sp"
+                        android:text="@string/frag_ap_cod_pai"
+                        android:fontFamily="@font/roboto_condensed"/>
+
+                    <View
+                        android:background="@color/grey"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:layout_margin="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvSemAlteracoesPai"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="@string/frag_ap_sem_alteracoes"
+                        android:textSize="@dimen/text_size_subtitulo"
+                        android:gravity="center"
+                        android:visibility="visible"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvAlteracaoPrecoPai"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="vertical"
+                        android:clipToPadding="false"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAlteracaoPrecoCor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llAlteracaoPrecoPai"
+                    android:paddingBottom="45dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="24sp"
+                        android:text="@string/frag_ap_cor"
+                        android:fontFamily="@font/roboto_condensed"
+                        android:visibility="visible"/>
+
+                    <View
+                        android:background="@color/grey"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:layout_margin="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvSemAlteracoesCor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="@string/frag_ap_sem_alteracoes"
+                        android:textSize="@dimen/text_size_subtitulo"
+                        android:gravity="center"
+                        android:visibility="visible"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvAlteracaoPrecoCor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="vertical"
+                        android:clipToPadding="false"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

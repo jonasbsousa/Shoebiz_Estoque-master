@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <TextView
+        android:id="@+id/tvTxtCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:textSize="16sp"
+        android:text="@string/fi_area"/>
+
+    <TextView
+        android:id="@+id/tvCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tvTxtCodigo"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvIntegrado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textSize="16sp"
+        tools:ignore="RelativeOverlap" />
+
+    <View
+        android:id="@+id/vDividerOrcamento"
+        android:layout_below="@+id/tvTxtCodigo"
+        android:layout_marginTop="5dp"
+        android:background="?attr/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"/>
+</RelativeLayout>
